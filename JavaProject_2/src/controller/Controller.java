@@ -30,7 +30,9 @@ public class Controller {
 		 */
 		
 		//step 1. 쿼리 작성
-		String sql = "SELECT ID, NAME, PHONE, JOINDATE FROM MB WHERE ID IN('tttt','rrrr','eeee') AND DELYN IS NULL";
+		String sql = "SELECT ID, NAME, PHONE, JOINDATE "
+				+ "FROM MB "
+				+ "WHERE ID IN('tttt','rrrr','eeee') AND DELYN IS NULL";
 		
 		//step 2. 리스트 전체 출력해보기
 		List<Map<String, Object>> list = jdbc.selectList(sql);
